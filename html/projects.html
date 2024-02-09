@@ -1,3 +1,5 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +12,6 @@
 </head>
 
 <body>
-    <div class="background-image image"></div>
-
     <header>
         <div class="logo-container">
             <img src="/images/tie.jpg" alt="Tanjodh Hayer Portfolio">
@@ -20,29 +20,114 @@
         <nav>
             <ul>
                 <li><a href="index.html"><i class="fas fa-question-circle"></i> HOME</a></li>
-                <li><a href="#projects"><i class="fas fa-question-circle"></i> PROJECTS</a></li>
-                <li><a href="contact.html"><i class="fas fa-question-circle"></i> CONTACT</a></li>
+                <li><a href="#projects" id="projects-link"><i class="fas fa-question-circle"></i> PROJECTS</a></li>
                 <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="home">
-        <h2>Welcome to Tanjodh Hayer Portfolio!</h2>
+        <!-- Your existing content goes here -->
 
-        <p>All my projects in one place with the results visable and easy to see</p>
+        <h2>Projects</h2>
 
-        <div class="feature">
-            <h4>Project 1</h4>
-            <p>....</p>
+        <!-- Project: LightNovel Recommender -->
+        <section class="projects">
+           <div class="project">
+            <h3> <a href="https://github.com/TanjodhHayer/LNProject">LightNovel Recommender </a> </h3>
+            <!-- Add other project details as needed -->
+            <div class="additional-info">
+                <ul>
+                    <li>Implemented Redis caching to improve performance and speed up data retrieval.</li>
+                    <li>Configured master-slave architecture using log shipping for data redundancy and high availability.</li>
+                    <li>Developed a Python web scraper to extract light novel data from external sources.</li>
+                </ul>
+                Technologies: Java, Python, JavaScript, MSSQL, Redis</li>
+            </div>
+        </div> 
+        </section>
+        <section class="projects">
+            <!-- Project: BGC Engineering Inventory System -->
+        <div class="project" >
+            <h3><a href="https://github.com/TanjodhHayer/bgc-engineering-inventory-management">BGC Engineering Inventory System</a></h3>
+            <!-- Add other project details as needed -->
+            <div class="additional-info">
+                <ul>
+                    <li>Collaborated with BGC Engineering personnel to develop and deploy a custom inventory management system.</li>
+                    <li>Selected Express.js and Node.js for backend scalability and robustness.</li>
+                    <li>Integrated the system with PostgreSQL for reliable data storage.</li>
+                </ul>
+                
+                Technologies: Javascript, React, Express.js, PostgresSQL, Node.js, Heroku
+            </div>
         </div>
+        </section>
 
-        <h3 style="text-align: center;">To contact me checkout my <a href="contact.html"> Contact page</a> </h3>
-
+        <!-- Project: DailyDime Financial App -->
+        <section class="projects" >
+            <div class="project"  id="daily-dime">
+                <h3><a href="https://github.com/TanjodhHayer/DailyDime362Proj">DailyDime Financial App</a></h3>
+                <!-- Add other project details as needed -->
+                <div class="additional-info">
+                    <ul>
+                        <li>Developed a mobile app for managing personal finances through visualizations and illustrations.</li>
+                        <li>Utilized Firebase for secure user authentication and saving financial data for user-specific accounts.</li>
+                        <li>Incorporated Kotlin MVVM architecture for a modular structure, creating an easier way of adjusting the codebase.</li>
+                    </ul>
+                    <!-- Add more details if necessary -->
+                    Technologies: Kotlin, Java, Firebase
+                </div>
+            </div>
+        </section>
+        <section class="projects">
+            <div class="project" id="game-predictor">
+                <h3><a href="https://github.com/TanjodhHayer/GamePredictor"> Game Predictor </a></h3>
+                <!-- Additional information initially hidden -->
+                <div class="additional-info">
+                    <ul>
+                        <li>Loading and cleaning datasets with 65k games.</li>
+                        <li>Conducting analysis and visualization on game-related data.</li>
+                        <li>Training a Logistic Regression model and evaluating its performance.</li>
+                        <li>Comparing the model with alternative approaches like K-Nearest Neighbors and Random Forest.</li>
+                    </ul>
+                    Technologies: Python
+                </div>
+            </div>
+        </section>
+        <!-- Project: Parent App -->
+        <section class="projects">
+            <div class="project" id="parent-app">
+                <h3><a href="https://github.com/TanjodhHayer/ParentApp">Parent App</a></h3>
+                <!-- Additional information initially hidden -->
+                <div class="additional-info">
+                    <ul>
+                        <li>Developed in a team with an agile approach to help parents with raising children.</li>
+                        <li>Designed with a State Model Diagram for guidance on breathing exercises for calming children.</li>
+                        <li>Utilized GSON, JSON, and Shared Preferences to save user-added data.</li>
+                        <li>Incorporated animations and sounds to the various functionalities to keep children focused on the app</li>
+                    </ul>
+                    Technologies: Java, Android Studio
+                </div>
+            </div>
+        </section>
+        <section class="projects">
+        <!-- Project: Consumable Item List -->
+        <div class="project" >
+            <h3>Consumable Item List Tracker</h3>
+            <!-- Add other project details as needed -->
+            <div class="additional-info">
+                <ul>
+                    <li>Created a Consumable Item List application for managing inventory and tracking usage.</li>
+                    <li>Implemented a REST API using Spring Boot for optimized application efficiency.</li>
+                    <li>Utilized Factory pattern and interfaces for a modular, reusable codebase.</li>
+                </ul>
+                Technologies: Java, Swing, Spring Boot
+            </div>
+        </div>
+        </section>
     </section>
 
-
-
+    <script src="js/script.js"></script>
 </body>
 
 </html>

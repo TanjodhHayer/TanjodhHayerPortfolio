@@ -2,9 +2,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('/images/background.png');
+     background-image: url('/images/bg.png');
+    background-color: #969393;
     background-position: center;
     color: #fff;
+}
+
+#homePage{
+    background-image: url('/images/bg.png');
 }
 
 header {
@@ -39,7 +44,22 @@ nav ul li {
 }
 
 section {
-    max-width: 800px;
+    max-width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    padding-bottom: 5%;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.center-table {
+    margin: auto;
+}
+
+#home{
+    max-width: 60%;
+    height: max-content;
     margin: 20px auto;
     padding: 20px;
     background-color: #333;
@@ -48,10 +68,45 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.projects{
+    padding: 20px;
+    background-color: #696969;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.additional-info {
+    display: none;
+}
+
+.project:hover .additional-info {
+    display: block;
+    /* Add styling for the displayed information, e.g., background color, text color, etc. */
+}
 h2{
     text-align: center;
 }
 
+h1{
+    text-align: center;
+    
+}
+h3{
+    text-align: center;
+}
+h4{
+    text-align: center;
+}
+h5{
+    text-align: center;
+}
+
+#name{
+    font-size: 500%;
+}
+#title{
+    font-size: 300%;
+}
 .team{
     width: 50%; /* Adjust the width as needed */
     margin-left: auto;
