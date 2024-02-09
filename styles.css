@@ -2,14 +2,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-     background-image: url('/images/bg.png');
+     background-image: url('images/bg.png');
     background-color: #969393;
     background-position: center;
     color: #fff;
 }
 
 #homePage{
-    background-image: url('/images/bg.png');
+    background-image: url('images/bg.png');
 }
 
 header {
