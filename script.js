@@ -19,6 +19,29 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollMessage = document.querySelector('.page-header__scroll');
+    const homeProjectSection = document.getElementById('home-project');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Hide the scroll message when the #home-project section is visible
+                scrollMessage.classList.add('hidden');
+            } else {
+                // Show the scroll message again if the #home-project section is not visible
+                scrollMessage.classList.remove('hidden');
+            }
+        });
+    }, {
+        threshold: 0.1 // Trigger when 10% of the element is visible
+    });
+
+    // Observe the #home-project section
+    observer.observe(homeProjectSection);
+});
+
+
 
 function handleScroll() {
     const homeSection = document.getElementById('home-project');
@@ -48,6 +71,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, {
         threshold: 0.7 // Trigger the callback when 10% of the element is visible
+    });
+
+    observer.observe(section);
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const section = document.getElementById('home-project');
+    const parentContainer = document.querySelector('.parent-container');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // When #home-project is visible, hide the .parent-container
+                parentContainer.style.opacity = '0';
+                parentContainer.style.visibility = 'hidden';
+            } else {
+                // When #home-project is not visible, show the .parent-container
+                parentContainer.style.opacity = '1';
+                parentContainer.style.visibility = 'visible';
+            }
+        });
+    }, {
+        threshold: 0.7 // Trigger the callback when 70% of the element is visible
     });
 
     observer.observe(section);

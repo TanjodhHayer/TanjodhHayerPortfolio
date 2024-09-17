@@ -32,7 +32,7 @@ nav {
     display: flex;
 }
 
-nav ul,li {
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -47,6 +47,17 @@ nav ul li:last-child {
     margin-right: 0; /* Remove margin for the last item */
 }
 
+/* Remove bullets and default styling for lists with class no-bullets */
+ul.no-bullets {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;            /* Remove padding */
+    margin: 0;             /* Remove margin */
+}
+
+/* Optional: Add spacing between list items */
+ul.no-bullets li {
+    margin-bottom: 8px;    /* Space between items */
+}
 
 
 /* Section Styles */
@@ -236,6 +247,8 @@ a:hover {
     display: inline-block; /* Allow centering within text-align context */
     text-align: center; /* Center text horizontally within its own box */
 }
+
+
 /* Home Project Visibility Animation */
 #home-project {
     opacity: 0;
