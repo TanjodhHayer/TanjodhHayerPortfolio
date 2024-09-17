@@ -13,8 +13,9 @@ header {
     background-color: #333;
     color: white;
     padding: 10px;
+    text-align: center;
     display: flex;
-    justify-content: flex-start; /* Ensure space between logo and nav */
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -28,26 +29,16 @@ header {
     margin-right: 10px;
 }
 
-nav {
-    display: flex;
-}
-
-nav ul,li {
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Align items horizontally */
 }
 
 nav ul li {
-    margin-right: 20px; /* Space between navigation items */
+    display: inline;
+    margin-right: 20px;
 }
-
-nav ul li:last-child {
-    margin-right: 0; /* Remove margin for the last item */
-}
-
-
 
 /* Section Styles */
 section {
@@ -72,13 +63,11 @@ section {
 
 /* Projects Styles */
 .projects {
-    padding: 25px;
+    padding: 20px;
     background-color: #696969;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
-    position: relative; /* For positioning additional-info inside */
-    overflow: hidden; /* Ensure additional-info doesn't overflow */
 }
 
 .project {
@@ -93,66 +82,41 @@ section {
 }
 
 .additional-info {
-    display: none; /* Initially hidden */
+    display: none;
     padding: 15px;
     background-color: #444; /* Darker background for the additional info */
     color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.3s ease; /* Smooth transition */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(100%); /* Hide below the box initially */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
     opacity: 0;
-    margin-top: 15px; /* Space between title and additional info */
 }
 
-.projects:hover {
-    transform: scale(1.04); /* Slightly scale up the project box on hover */
+.project:hover {
+    transform: scale(1.03); /* Slightly scale up the project box on hover */
     background-color: #595959; /* Lighter background color on hover */
 }
 
-.projects:hover .additional-info {
+.project:hover .additional-info {
     display: block;
     opacity: 1;
+    transform: translateY(0); /* Slide up to show */
 }
 
 /* Container Styles for Proper Positioning */
 .project-container {
     position: relative;
+    overflow: hidden; /* Ensure additional-info doesn't overflow */
 }
-
-
-.center-table {
-    margin: 0 auto;
-    width: 80%; /* Adjust width as needed */
-    border-collapse: collapse; /* Combine borders for cleaner look */
-    background-color: #444;
-    color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.center-table th, .center-table td {
-    padding: 15px;
-    text-align: center;
-    border: 1px solid #ddd; /* Adds border between cells */
-}
-
-.center-table th {
-    background-color: #333;
-    font-weight: bold;
-}
-
-.center-table td {
-    background-color: #555;
-}
-
-.center-table tr:nth-child(even) td {
-    background-color: #666; /* Alternate row colors for readability */
-}
-
 
 
 /* Text Alignment Styles */
-h1, h2, h3, h4, h5,ul,li {
+h1, h2, h3, h4, h5 {
     text-align: center;
 }
 
@@ -199,18 +163,6 @@ a:hover {
     animation: fade-in 0.5s ease forwards;
     text-align: center;
 }
-
-/* Initial state for scroll span text */
-.page-header__scroll span {
-    opacity: 1;
-    transition: opacity 1s ease; /* Smooth transition for fade-out */
-}
-
-/* Fade out the scroll span text */
-.page-header__scroll.fade-out span {
-    opacity: 0;
-}
-
 
 /* Add a delay to each letter */
 .page-header__scroll span span:nth-child(1) { animation-delay: 0s; }
@@ -262,11 +214,6 @@ a:hover {
 
 /* Ensure the section is initially hidden */
 #home {
-    opacity: 1;
-    animation: fadeIn 2s ease forwards; /* Apply the fade-in animation */
-}
-
-#faq {
     opacity: 1;
     animation: fadeIn 2s ease forwards; /* Apply the fade-in animation */
 }
